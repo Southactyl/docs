@@ -1,0 +1,18 @@
+{
+  "name": "Southactyl",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.6.2",
+    "docus": "latest",
+    "nuxt": "^4.3.1",
+    "nuxt-studio": "^1.6.1",
+    "vite-tsconfig-paths": "^6.1.1"
+  },
+  "devDependencies": {
+    "zod": "^3.25.76",
+    "zod-to-json-schema": "^3.25.0"
+  }
+}

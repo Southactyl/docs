@@ -1,0 +1,176 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme {
+  --font-sans: 'Public Sans', sans-serif;
+
+  --breakpoint-3xl: 1920px;
+
+  --color-green-50: #EFFDF5;
+  --color-green-100: #D9FBE8;
+  --color-green-200: #B3F5D1;
+  --color-green-300: #75EDAE;
+  --color-green-400: #00DC82;
+  --color-green-500: #00C16A;
+  --color-green-600: #00A155;
+  --color-green-700: #007F45;
+  --color-green-800: #016538;
+  --color-green-900: #0A5331;
+  --color-green-950: #052E16;
+}
+
+/* Light mode default */
+:root {
+  color-scheme: light;
+
+  --bg: #f8fafc;
+  --bg-soft: #ffffff;
+  --panel: rgba(255, 255, 255, 0.78);
+  --border: rgba(15, 23, 42, 0.12);
+  --text: #0f172a;
+  --muted: #475569;
+  --primary: #2563eb;
+
+  --selection-text: #ffffff;
+  --selection-bg: #2563eb;
+
+  --gradient-left: rgba(59, 130, 246, 0.16);
+  --gradient-right: rgba(168, 85, 247, 0.14);
+  --gradient-base-start: #f8fafc;
+  --gradient-base-mid: #eef2ff;
+  --gradient-base-end: #f1f5f9;
+}
+
+/* Dark mode */
+.dark {
+  color-scheme: dark;
+
+  --bg: #020617;
+  --bg-soft: #0f172a;
+  --panel: rgba(15, 23, 42, 0.72);
+  --border: rgba(255, 255, 255, 0.12);
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --primary: #60a5fa;
+
+  --selection-text: #020617;
+  --selection-bg: #bfdbfe;
+
+  --gradient-left: rgba(59, 130, 246, 0.22);
+  --gradient-right: rgba(168, 85, 247, 0.2);
+  --gradient-base-start: #020617;
+  --gradient-base-mid: #0f172a;
+  --gradient-base-end: #111827;
+}
+
+/* System dark fallback when no explicit light mode is forced */
+@media (prefers-color-scheme: dark) {
+  html:not(.light) {
+    color-scheme: dark;
+
+    --bg: #020617;
+    --bg-soft: #0f172a;
+    --panel: rgba(15, 23, 42, 0.72);
+    --border: rgba(255, 255, 255, 0.12);
+    --text: #e5e7eb;
+    --muted: #94a3b8;
+    --primary: #60a5fa;
+
+    --selection-text: #020617;
+    --selection-bg: #bfdbfe;
+
+    --gradient-left: rgba(59, 130, 246, 0.22);
+    --gradient-right: rgba(168, 85, 247, 0.2);
+    --gradient-base-start: #020617;
+    --gradient-base-mid: #0f172a;
+    --gradient-base-end: #111827;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+#__nuxt {
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, var(--gradient-left), transparent 32rem),
+    radial-gradient(circle at top right, var(--gradient-right), transparent 30rem),
+    linear-gradient(
+      135deg,
+      var(--gradient-base-start) 0%,
+      var(--gradient-base-mid) 52%,
+      var(--gradient-base-end) 100%
+    );
+  font-family:
+    "Public Sans",
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  color: var(--selection-text);
+  background: var(--selection-bg);
+}
+
+/* Keep long code lines inside code blocks instead of stretching the whole page. */
+.prose pre,
+[class~="prose"] pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Make the markdown body wider without touching the Docus page grid. */
+.prose,
+[class~="prose"] {
+  max-width: min(92ch, 100%) !important;
+}
+
+/* Stop the right-side table of contents from cutting labels. */
+[aria-label="Table of contents"] a,
+[aria-label="On this page"] a,
+[aria-label="Table of contents"] [class~="truncate"],
+[aria-label="On this page"] [class~="truncate"] {
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  overflow-wrap: anywhere;
+}
+
+/* Slightly widen the TOC, but do not rewrite the full page grid. */
+@media (min-width: 1280px) {
+  [aria-label="Table of contents"],
+  [aria-label="On this page"] {
+    width: 18rem;
+    max-width: 18rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  [aria-label="Table of contents"],
+  [aria-label="On this page"] {
+    width: 20rem;
+    max-width: 20rem;
+  }
+}
