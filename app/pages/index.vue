@@ -43,11 +43,11 @@ const installSteps = [
 const quickLinks = [
   {
     label: 'Installation guide',
-    to: 'install-panel'
+    to: '/docs/installation'
   },
   {
     label: 'Requirements',
-    to: '/docs/requirements'
+    to: '/docs/installation/02-requirements'
   },
   {
     label: 'Addons',
@@ -65,20 +65,6 @@ const quickLinks = [
     <section class="hero">
       <div class="hero__glow hero__glow--one" />
       <div class="hero__glow hero__glow--two" />
-
-      <nav class="nav">
-        <NuxtLink to="/" class="brand">
-          <span class="brand__mark">S</span>
-          <span>Southactyl</span>
-        </NuxtLink>
-
-        <div class="nav__links">
-          <NuxtLink to="/docs">Docs</NuxtLink>
-          <NuxtLink to="/docs/installation">Install</NuxtLink>
-          <NuxtLink to="/docs/addons">Addons</NuxtLink>
-          <NuxtLink to="/docs/troubleshooting">Troubleshooting</NuxtLink>
-        </div>
-      </nav>
 
       <div class="hero__content">
         <div class="badge-row">
