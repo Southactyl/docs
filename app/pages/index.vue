@@ -69,20 +69,18 @@ const quickLinks = [
       <div class="hero__content">
         <div class="badge-row">
           <span>Pterodactyl-based</span>
-          <span>Rethemed panel</span>
-          <span>Addon support</span>
+          <span>100% Free with no additional cost</span>
         </div>
 
-        <p class="eyebrow">Southactyl Panel Docs</p>
+        <p class="eyebrow">One Panel, Infinite Possibilities.</p>
 
         <h1>
-          Install Southactyl without breaking your panel.
+          Southactyl Panel
         </h1>
 
         <p class="hero__text">
-          Southactyl is a re-themed Pterodactyl panel with addon support.
-          These docs walk you through requirements, installation, asset building,
-          addon setup, and common fixes.
+          Southactyl is completly free and open source way for hostings to 
+          simplify their panel management and provide better experience for their customers.
         </p>
 
         <div class="hero__actions">
@@ -90,8 +88,8 @@ const quickLinks = [
             Start installation
           </NuxtLink>
 
-          <NuxtLink to="/docs/requirements" class="button button--ghost">
-            View requirements
+          <NuxtLink to="/docs/demo" class="button button--ghost">
+            View demo
           </NuxtLink>
         </div>
       </div>
