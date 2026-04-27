@@ -1,5 +1,9 @@
 export default defineAppConfig({
   ui: {
+    colors: {
+      primary: 'blue',
+      neutral: 'slate'
+    },
     contentToc: {
       slots: {
         root: 'w-full max-w-none xl:w-72 2xl:w-80',
