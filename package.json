@@ -9,7 +9,8 @@
     "docus": "latest",
     "nuxt": "^4.3.1",
     "nuxt-studio": "^1.6.1",
-    "vite-tsconfig-paths": "^6.1.1"
+    "vite-tsconfig-paths": "^6.1.1",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "zod": "^3.25.76",
